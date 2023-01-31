@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby
 
-Things you may want to cover:
+Instalar RVM [https://rvm.io/rvm/install]:
 
-* Ruby version
+linux:
 
-* System dependencies
+`curl -sSL https://get.rvm.io | bash`
 
-* Configuration
+Deslogar e logar novamente.
 
-* Database creation
+Instalar Ruby:
 
-* Database initialization
+`rvm install ruby-2.7.2`
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
