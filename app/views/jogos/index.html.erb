@@ -1,0 +1,107 @@
+<div class="text-center">
+  <p><%= l Time.zone.today, format: :long %></p>
+  <p><%= @jogos.size %>
+    jogos encontrados</p>
+</div>
+
+<%= form_with model: @consulta_form, url: root_path, method: "get", scope: "jogo" do |f| %>
+  <div class="grid">
+    <div>
+      <%= f.label :data %>
+      <%= f.date_field :data, onchange: "this.form.requestSubmit()" %>
+    </div>
+
+    <div>
+      <%= f.label :banca %>
+      <%= f.select :banca, @consulta_form.combo_bancas,
+        { include_blank: true },
+        { onchange: "this.form.requestSubmit()" } %>
+    </div>
+  </div>
+
+<% end %>
+
+<table role="grid">
+  <thead>
+    <tr>
+      <th scope="col">
+        Data
+        <div>
+          <a href="?sort_field=data&sort_order=asc">&#9650;</a>
+          <a href="?sort_field=data&sort_order=desc">&#9660;</a>
+        </div>
+      </th>
+      <th scope="col">
+        Horário
+        <div>
+          <a href="?sort_field=horario&sort_order=asc">&#9650;</a>
+          <a href="?sort_field=horario&sort_order=desc">&#9660;</a>
+        </div>
+      </th>
+      <th scope="col">
+        Jogo
+        <div>
+          <a href="?sort_field=descricao&sort_order=asc">&#9650;</a>
+          <a href="?sort_field=descricao&sort_order=desc">&#9660;</a>
+        </div>
+      </th>
+      <th scope="col">
+        Odd1
+        <div>
+          <a href="?sort_field=odd1&sort_order=asc">&#9650;</a>
+          <a href="?sort_field=odd1&sort_order=desc">&#9660;</a>
+        </div>
+      </th>
+      <th scope="col">
+        OddX
+        <div>
+          <a href="?sort_field=oddx&sort_order=asc">&#9650;</a>
+          <a href="?sort_field=oddx&sort_order=desc">&#9660;</a>
+        </div>
+      </th>
+      <th scope="col">
+        Odd2
+        <div>
+          <a href="?sort_field=odd2&sort_order=asc">&#9650;</a>
+          <a href="?sort_field=odd2&sort_order=desc">&#9660;</a>
+        </div>
+      </th>
+      <th scope="col">
+        Banca
+        <div>
+          <a href="?sort_field=banca&sort_order=asc">&#9650;</a>
+          <a href="?sort_field=banca&sort_order=desc">&#9660;</a>
+        </div>
+      </th>
+      <th scope="col">
+        Palpite
+        <div>
+          <a href="?sort_field=palpite&sort_order=asc">&#9650;</a>
+          <a href="?sort_field=palpite&sort_order=desc">&#9660;</a>
+        </div>
+      </th>
+      <th scope="col">
+        Dupla Hipótese
+        <div>
+          <a href="?sort_field=dupla_hipotese&sort_order=asc">&#9650;</a>
+          <a href="?sort_field=dupla_hipotese&sort_order=desc">&#9660;</a>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @jogos.each do |jogo| %>
+      <tr>
+        <td><%= jogo.data %></td>
+        <td><%= jogo.horario %></td>
+        <td><%= jogo.descricao %></td>
+        <td><%= jogo.odd1 %></td>
+        <td><%= jogo.oddx %></td>
+        <td><%= jogo.odd2 %></td>
+        <td><%= jogo.banca %></td>
+        <td><%= jogo.palpite %></td>
+        <td><%= jogo.dupla_hipotese %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
