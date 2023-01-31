@@ -8,7 +8,9 @@ linux:
 
 `curl -sSL https://get.rvm.io | bash`
 
-deslogar e logar novamente
+Deslogar e logar novamente.
+
+Instalar Ruby:
 
 `rvm install ruby-2.7.2`
 
