@@ -12,6 +12,15 @@ Deslogar e logar novamente.
 
 Instalar Ruby:
 
-`rvm install ruby-2.7.2`
+`rvm install ruby-3.1.3`
+
+`rvm --default use 3.1.3`
+
+`gem install bundle`
+
+Apenas produção: `bundle config set --local deployment 'true'`
+
+`bundle install`
 
 
+TODO: Instalar nodejs
