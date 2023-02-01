@@ -22,6 +22,6 @@ Instalar Ruby:
 
 `rvm --default use 3.1.3`
 
-`gem install bundle`
+`gem install bundler`
 
 Apenas produção: `bundle config set --local deployment 'true'`
