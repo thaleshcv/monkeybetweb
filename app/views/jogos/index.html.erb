@@ -27,64 +27,100 @@
       <th scope="col">
         Data
         <div>
-          <a href="?sort_field=data&sort_order=asc">&#9650;</a>
-          <a href="?sort_field=data&sort_order=desc">&#9660;</a>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "data", sort_order: "asc")) do %>
+            &#9650;
+          <% end %>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "data", sort_order: "desc")) do %>
+            &#9660;
+          <% end %>
         </div>
       </th>
       <th scope="col">
         Horário
         <div>
-          <a href="?sort_field=horario&sort_order=asc">&#9650;</a>
-          <a href="?sort_field=horario&sort_order=desc">&#9660;</a>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "horario", sort_order: "asc")) do %>
+            &#9650;
+          <% end %>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "horario", sort_order: "desc")) do %>
+            &#9660;
+          <% end %>
         </div>
       </th>
       <th scope="col">
         Jogo
         <div>
-          <a href="?sort_field=descricao&sort_order=asc">&#9650;</a>
-          <a href="?sort_field=descricao&sort_order=desc">&#9660;</a>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "descricao", sort_order: "asc")) do %>
+            &#9650;
+          <% end %>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "descricao", sort_order: "desc")) do %>
+            &#9660;
+          <% end %>
         </div>
       </th>
       <th scope="col">
         Odd1
         <div>
-          <a href="?sort_field=odd1&sort_order=asc">&#9650;</a>
-          <a href="?sort_field=odd1&sort_order=desc">&#9660;</a>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "odd1", sort_order: "asc")) do %>
+            &#9650;
+          <% end %>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "odd1", sort_order: "desc")) do %>
+            &#9660;
+          <% end %>
         </div>
       </th>
       <th scope="col">
         OddX
         <div>
-          <a href="?sort_field=oddx&sort_order=asc">&#9650;</a>
-          <a href="?sort_field=oddx&sort_order=desc">&#9660;</a>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "oddx", sort_order: "asc")) do %>
+            &#9650;
+          <% end %>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "oddx", sort_order: "desc")) do %>
+            &#9660;
+          <% end %>
         </div>
       </th>
       <th scope="col">
         Odd2
         <div>
-          <a href="?sort_field=odd2&sort_order=asc">&#9650;</a>
-          <a href="?sort_field=odd2&sort_order=desc">&#9660;</a>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "odd2", sort_order: "asc")) do %>
+            &#9650;
+          <% end %>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "odd2", sort_order: "desc")) do %>
+            &#9660;
+          <% end %>
         </div>
       </th>
       <th scope="col">
         Banca
         <div>
-          <a href="?sort_field=banca&sort_order=asc">&#9650;</a>
-          <a href="?sort_field=banca&sort_order=desc">&#9660;</a>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "banca", sort_order: "asc")) do %>
+            &#9650;
+          <% end %>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "banca", sort_order: "desc")) do %>
+            &#9660;
+          <% end %>
         </div>
       </th>
       <th scope="col">
         Palpite
         <div>
-          <a href="?sort_field=palpite&sort_order=asc">&#9650;</a>
-          <a href="?sort_field=palpite&sort_order=desc">&#9660;</a>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "palpite", sort_order: "asc")) do %>
+            &#9650;
+          <% end %>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "palpite", sort_order: "desc")) do %>
+            &#9660;
+          <% end %>
         </div>
       </th>
       <th scope="col">
         Dupla Hipótese
         <div>
-          <a href="?sort_field=dupla_hipotese&sort_order=asc">&#9650;</a>
-          <a href="?sort_field=dupla_hipotese&sort_order=desc">&#9660;</a>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "dupla_hipotese", sort_order: "asc")) do %>
+            &#9650;
+          <% end %>
+          <%= link_to root_path(jogo: @consulta_form.merge_query_params(sort_field: "dupla_hipotese", sort_order: "desc")) do %>
+            &#9660;
+          <% end %>
         </div>
       </th>
     </tr>

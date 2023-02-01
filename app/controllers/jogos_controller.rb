@@ -9,6 +9,6 @@ class JogosController < ApplicationController
   private
 
   def consulta_params
-    params.fetch(:jogo, {}).permit(:banca, :data)
+    params.fetch(:jogo, {}).permit(:banca, :data, :sort_field, :sort_order)
   end
 end
