@@ -6,5 +6,5 @@ class Jogo < ApplicationRecord
   attribute :data, :date
 
   scope :where_banca, ->(banca) { where(banca: banca) if banca.present? }
-  scope :where_data, ->(data) { where(data: data) if data.present? }
+  scope :where_data, ->(data) { where("data = ?", data.strftime("%d/%m/%Y")) if data.present? }
 end

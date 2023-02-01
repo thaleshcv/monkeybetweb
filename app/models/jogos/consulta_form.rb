@@ -4,14 +4,10 @@ class Jogos::ConsultaForm
   include ActiveModel::Model
   include ActiveModel::Attributes
 
-  attribute :data, :date
+  attribute :data, :date, default: Time.zone.tomorrow
   attribute :banca, :string
   attribute :sort_field, :string
   attribute :sort_order, :string
-
-  def data_texto
-    data.strftime("%d/%m/%Y") if data.present?
-  end
 
   def combo_bancas
     Jogo.distinct.order(banca: :asc).pluck(:banca)
@@ -22,7 +18,7 @@ class Jogos::ConsultaForm
   end
 
   def executa
-    jogos = Jogo.where_banca(banca).where_data(data_texto)
+    jogos = Jogo.where_banca(banca).where_data(data)
 
     if sort_field.present? && sort_order.present?
       jogos.order("#{sort_field} #{sort_order}")
