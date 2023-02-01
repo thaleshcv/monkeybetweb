@@ -33,5 +33,7 @@ module Monkeybetweb
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.i18n.default_locale = "pt-BR"
+    config.time_zone = "Brasilia"
   end
 end

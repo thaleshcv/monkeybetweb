@@ -1,5 +1,4 @@
 <div class="text-center">
-  <p><%= l Time.zone.today, format: :long %></p>
   <p><%= @jogos.size %>
     jogos encontrados</p>
 </div>
@@ -128,7 +127,7 @@
   <tbody>
     <% @jogos.each do |jogo| %>
       <tr>
-        <td><%= jogo.data %></td>
+        <td><%= l jogo.data, format: :short %></td>
         <td><%= jogo.horario %></td>
         <td><%= jogo.descricao %></td>
         <td><%= jogo.odd1 %></td>
