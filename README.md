@@ -24,4 +24,20 @@ Instalar Ruby:
 
 `gem install bundler`
 
-Apenas produção: `bundle config set --local deployment 'true'`
+Apenas produção:
+
+`bundle config set --local deployment 'true'`
+
+Na pasta do projeto:
+
+`bundle`
+
+`bundle exec rails assets:precompile`
+
+criar arquivo `.env` com o caminho para o arquivo DB
+
+exemplo: `MONKEYBET_DATABASE=/home/user/monkeybet/monkeybet.db`
+
+copiar `config/master.key` para produção
+
+
